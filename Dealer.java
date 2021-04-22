@@ -1,3 +1,4 @@
+//For the most part, this file is just PSEUDO-CODE
 public class Dealer
 {
 	public static void main(String[] args) {
