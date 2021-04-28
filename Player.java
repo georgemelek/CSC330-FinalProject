@@ -1,4 +1,4 @@
-package edu.cuny.csi.csc330.FinalProject;
+package FinalProject;
 import java.util.*;  
 import java.util.Scanner; 
 public class Player {
@@ -8,6 +8,10 @@ public class Player {
 	private int deposit; 
 	private int betAmount; 
 	private int playerMove;
+	private Hand hand;
+	//private  Card[] hand = new Card[15];
+	private int numCards = 0;
+	
 	private final static int DEFAULT_NUM_PLAYERS = 1; 
 	
     // Constructor
@@ -94,6 +98,10 @@ public class Player {
 		}
 	}
 	
+	public void addCard(Card card) {
+		hand.addCard(card);
+	}
+	
     
     // Display 
 	public void displayHeader() { 
@@ -104,11 +112,15 @@ public class Player {
 	
     private void init(int handsDealt) { 
 		//For the amount of players at table 
-		for (int i = 1; i <= handsDealt; i++) { 
+		//for (int i = 1; i <= handsDealt; i++) { 
 			Player p = new Player(); 
-		}
+		//}
 	}
 	
+    public String displayCards() {
+    	return hand.toString(false, false);
+    }
+    
     public static void main(String[] args) { 
 	}
 }

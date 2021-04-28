@@ -1,7 +1,28 @@
-//For the most part, this file is just PSEUDO-CODE
-public class Dealer
-{
-	public static void main(String[] args) {
+package FinalProject;
+
+
+public class Dealer {
+	private Hand dealerHand = new Hand();
+	
+	public void addCard(Card card) {
+		dealerHand.addCard(card);
+	}
+	public int calculateTotal() {
+		return dealerHand.calculateTotal();
+	}
+	public void clearHand() {
+		dealerHand.clearHand();
+	}
+	public boolean hasBlackjack() {
+		if(dealerHand.calculateTotal() == 21) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+	/*public static void main(String[] args) {
 		shuffleDeck();
 		do(){
 		    dealCards(){
@@ -51,5 +72,6 @@ public class Dealer
 		
 		
 	    }
-}
+	}
 
+}*/

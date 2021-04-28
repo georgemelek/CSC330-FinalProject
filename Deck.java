@@ -1,6 +1,4 @@
-package final330;
-
-
+package FinalProject;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -62,11 +60,14 @@ public void shuffle(){
 	}
 	
 	//Draw a top card from deck
-	public void draw(Deck decksCards){
+	public Card draw(){
 		//Add card to this deck from whatever deck its coming from
-		this.cards.add(decksCards.getCard(0));
+		//this.cards.add(decksCards.getCard(0));
 		//Remove the card in the deck its coming from
-		decksCards.removeCard(0);
+		Card tempCard = cards.get(0);
+		this.cards.remove(0);
+		return cards.get(0);
+		
 	}
 	
 	
@@ -82,19 +83,19 @@ public void shuffle(){
 		for(Card aCard : this.cards){
 			//Switch of possible values
 			switch(aCard.getValue()){
-			case TWO: totalValue += 2; break;
-			case THREE: totalValue += 3; break;
-			case FOUR: totalValue += 4; break;
-			case FIVE: totalValue += 5; break;
-			case SIX: totalValue += 6; break;
-			case SEVEN: totalValue += 7; break;
-			case EIGHT: totalValue += 8; break;
-			case NINE: totalValue += 9; break;
-			case TEN: totalValue += 10; break;
-			case JACK: totalValue += 10; break;
-			case QUEEN: totalValue += 10; break;
-			case KING: totalValue += 10; break;
-			case ACE: aces += 1; break;
+				case TWO: totalValue += 2; break;
+				case THREE: totalValue += 3; break;
+				case FOUR: totalValue += 4; break;
+				case FIVE: totalValue += 5; break;
+				case SIX: totalValue += 6; break;
+				case SEVEN: totalValue += 7; break;
+				case EIGHT: totalValue += 8; break;
+				case NINE: totalValue += 9; break;
+				case TEN: totalValue += 10; break;
+				case JACK: totalValue += 10; break;
+				case QUEEN: totalValue += 10; break;
+				case KING: totalValue += 10; break;
+				case ACE: aces += 1; break;
 			}			
 		}
 		

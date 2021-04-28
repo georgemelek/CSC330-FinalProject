@@ -1,4 +1,4 @@
-package final330;
+package FinalProject;
 
 public class Card {
 
