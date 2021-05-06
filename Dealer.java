@@ -20,17 +20,17 @@ public class Dealer {
 		while(dealerHand.calculateTotal() <= 16) {
 			System.out.println("Dealer's Total: " + dealerHand.calculateTotal() + " and hits");
 			dealerHand.addCard(deck.nextCard());
-			System.out.println("Dealer " + displayCards(true, false));
+			System.out.println("Dealer " + this.displayCards(true, false));
 		}
 		if(dealerHand.calculateTotal() > 21) {
-			System.out.println("Dealer has went over 21 and has lost." + this.displayCards(true, false);
+			System.out.println("Dealer has went over 21 and has lost." + this.displayCards(true, false));
 		}
 		else {
-			System.out.println("Dealer decides to stand. " + displayCards(true, false));
+			System.out.println("Dealer decides to stand. " + this.displayCards(true, false));
 		}
 	}
 	
-	public boolean hasBlackjack() {
+	public boolean hasBlackJack() {
 		if(dealerHand.calculateTotal() == 21) {
 			return true;
 		}
@@ -40,6 +40,6 @@ public class Dealer {
 	}
 	
 	public String displayCards(boolean isDealer, boolean isHidden) {
-		return "Dealer has Cards:" + dealerHand.toString(isDealer, isHidden);
+		return dealerHand.displayCards(isDealer, isHidden);
 	}
 }
